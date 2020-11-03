@@ -3,18 +3,17 @@ import Header from "./header"
 
 import "../assets/style.css"
 
-const Layout = ({ children, background, backColor, frontColor }) => {
+const Layout = ({ children, background, backColor, frontColor, menuToggle }) => {
 
   document.body.style.backgroundColor = backColor
+  document.body.style.backgroundImage = `url(${background})`
+  document.body.style.backgroundPosition = 'center'
+  document.body.style.backgroundSize = 'cover'
+  document.body.style.backgroundRepeat = 'no-repeat'
 
   return (
-    <div style={{
-      backgroundImage: `url(${background})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat'
-      }}>
-        <Header frontColor={frontColor} />
+    <div >
+        <Header menuToggle={menuToggle} frontColor={frontColor} />
         <div>{children}</div>
     </div>
   )

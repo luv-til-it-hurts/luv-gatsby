@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Link } from "gatsby"
-import { Box, Heading } from "@chakra-ui/core"
+
 import Img from "gatsby-image"
 import Layout from "../../components/layout"
 import { normalizePath } from "../../utils/get-url-path"
@@ -12,14 +12,14 @@ function BlogPost({ data }) {
 
   return (
     <Layout>
-      <Heading as="h1" size="xl" mb={5}>
+      <h1 >
         {title}
-      </Heading>
+      </h1>
 
       {!!featuredImage?.node?.remoteFile?.childImageSharp && (
-        <Box mb={5}>
+        <div>
           <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
-        </Box>
+        </div>
       )}
 
       <p dangerouslySetInnerHTML={{ __html: content }} />
