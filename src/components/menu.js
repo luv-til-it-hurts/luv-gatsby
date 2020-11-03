@@ -54,6 +54,13 @@ export default () => {
               node {
                 ... on WpCategory {
                   slug
+                  ACFCategoryData {
+                menuicon {
+                  localFile {
+                    publicURL
+                  }
+                }
+              }
                 }
               }
             }
@@ -123,6 +130,7 @@ export default () => {
                   to={normalizePath(path)}
                 >
                   {menuItem.label}
+                  <img style={{ display: `block`}} src={menuItem.connectedNode.node.ACFCategoryData.menuicon.localFile.publicURL} alt={menuItem.label} />
                 </Link>
               )
             })}

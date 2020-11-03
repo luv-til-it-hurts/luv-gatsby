@@ -14,24 +14,13 @@ export default function Heart({ data, pageContext }) {
 return (
   <Layout background={data.cat.ACFCategoryData.background.localFile.publicURL}
   backColor={data.cat.ACFCategoryData.color}
-  frontColor="#f35a02">
+  frontColor="#D0F63C">
 
-<div className="heartgrid">
+<div className="fireflygrid">
       {data.posts.nodes.map((post, index) => (
 
 
-
-
-
-
-
-
-
-
-
-
-
-        <div key={post.id} className={`heartgrid${index + 1}`}>
+        <div key={post.id} className={`fireflygrid${index + 1}`}>
           <Link to={normalizePath(post.uri)}>
          <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > {post.title} </div>
           </Link>
