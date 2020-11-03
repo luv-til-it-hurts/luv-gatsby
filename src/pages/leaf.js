@@ -12,13 +12,14 @@ export default function Heart({ data, pageContext }) {
   
 return (
   <Layout background={data.cat.ACFCategoryData.background.localFile.publicURL}
-  color={data.cat.ACFCategoryData.color}>
+  backColor={data.cat.ACFCategoryData.color}
+  frontColor="#353132">
 
-<div className="heartgrid">
+<div className="leafgrid">
       {data.posts.nodes.map((post, index) => (
 
 
-        <div key={post.id} className={`heartgrid${index + 1}`}>
+        <div key={post.id} className={`leafgrid${index + 1}`}>
           <Link style={{color: data.cat.ACFCategoryData.color}} to={normalizePath(post.uri)}>
           <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > {post.title} </div>
           </Link>
@@ -42,7 +43,7 @@ fragment Thumbnail on File {
   }
 }
 query {
-  cat: wpCategory(slug: {eq: "heart"}) {
+  cat: wpCategory(slug: {eq: "leaf"}) {
     id
     ACFCategoryData {
       color
@@ -58,7 +59,7 @@ query {
       }
     }
   }
- posts: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "heart"}}}}}) {
+ posts: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "leaf"}}}}}) {
     nodes {
       uri
       title
