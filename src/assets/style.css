@@ -1,3 +1,145 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 50px auto;
+}
+
+.menu-container {
+  z-index: 900;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: white;
+  margin-top: 140px;
+  height: 440px;
+  padding: 120px 0;
+}
+
+.menu {
+  color: #e30613;
+  margin: auto 0;
+  border: 1px solid;
+
+}
+
+.menu >nav{
+  display: flex;
+  font-size: 24px;
+  justify-content: space-evenly;
+}
+
+
+.page-menu {
+  height: 60px;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 45%;
+  }
+
+.page-menu >a:hover {
+text-decoration: underline;
+}
+
+.homegrid {
+  width: 480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  transform: rotate(45deg);
+  }
+
+  .homegrid >div {
+    width: 120px;
+    height: 120px;
+    background-color: #e30613;
+    }
+  
+  .homegrid1 { grid-area: 1 / 3 / 2 / 4; }
+  .homegrid2 { grid-area: 2 / 1 / 3 / 2; }
+  .homegrid3 { grid-area: 2 / 2 / 3 / 3; }
+  .homegrid4 { grid-area: 2 / 3 / 3 / 4; }
+  .homegrid5 { grid-area: 2 / 4 / 3 / 5; }
+  .homegrid6 { grid-area: 3 / 3 / 4 / 4; }
+  
+  .homegrid-icon {
+    margin: auto auto;
+    transform: rotate(-45deg);
+    }
+
+
+    /* TITLE in boxes */
+    .grid-item-title {
+      margin: 40px 8px auto;
+      text-align: center;
+      transform: rotate(45deg);
+      font-size: 17px;
+      line-height: 17px;
+      }
+
+/* HUMMINGBIRD */
+    .heartgrid {
+      width: 480px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      transform: rotate(-45deg);
+      }
+
+      .heartgrid >div {
+        width: 120px;
+        height: 120px;
+       background-color: #E91E63;
+        }
+      
+      .heartgrid1 { grid-area: 1 / 3 / 2 / 4; }
+      .heartgrid2 { grid-area: 2 / 1 / 3 / 2; }
+      .heartgrid3 { grid-area: 2 / 2 / 3 / 3; }
+      .heartgrid4 { grid-area: 2 / 3 / 3 / 4; }
+      .heartgrid5 { grid-area: 2 / 4 / 3 / 5; }
+      .heartgrid6 { grid-area: 3 / 2 / 4 / 3; }
+     
+
+/* HUMMINGBIRD */
+
+.hummingbirdgrid {
+  width: 480px;
+      margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  transform: rotate(-45deg);
+  }
+
+  .hummingbirdgrid >div {
+    width: 120px;
+    height: 120px;
+   background-color: #f35a02;
+    }
+  
+  
+  .hummingbirdgrid1 { grid-area: 1 / 3 / 2 / 4; }
+  .hummingbirdgrid2 { grid-area: 1 / 4 / 2 / 5; }
+  .hummingbirdgrid3 { grid-area: 2 / 1 / 3 / 2; }
+  .hummingbirdgrid4 { grid-area: 2 / 2 / 3 / 3; }
+  .hummingbirdgrid5 { grid-area: 2 / 3 / 3 / 4; }
+  .hummingbirdgrid6 { grid-area: 3 / 3 / 4 / 4; }
+  
+
+
+
+
+
+
+/* Gatsby Starter Styles */
 .pagination {
   width: 100%;
   display: grid;
