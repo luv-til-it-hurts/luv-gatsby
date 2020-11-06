@@ -25,12 +25,26 @@ export const query = graphql`
       nodes {
         ACFCategoryData {
           color
+          colorHigh
           pageicon {
             localFile {
               publicURL
             }
           }
         }
+      }
+    }
+    tags {
+      nodes {
+         slug
+        ACFTagData {
+          tagimage {
+            localFile {
+              publicURL
+            }
+          }
+        }
+       
       }
     }
     }

@@ -409,10 +409,19 @@ transform: rotate(64deg);
   justify-content: center;
 }
 .post-previous{
-  
-
-
+  padding: 45px;
+  text-align: right;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 600px;
 }
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
 .post-body {
   width:850px;
 background-color: #FFFFFA;
@@ -434,13 +443,14 @@ font-size: 18px;
 
 .post-body p {
 line-height: 30px;
-
-
 }
 
 .post-next {
-
-
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
 }
 
 /* Gatsby Starter Styles */
