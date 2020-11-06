@@ -13,7 +13,7 @@ export default function Heart({ data, pageContext }) {
 return (
   <Layout background={data.cat.ACFCategoryData.background.localFile.publicURL}
   backColor={data.cat.ACFCategoryData.color}
-  frontColor="#353132">
+  frontColor="#353132" logoToggle={true}>
 
 <div className="leafgrid">
       {data.posts.nodes.map((post, index) => (
@@ -21,7 +21,7 @@ return (
 
         <div key={post.id} className={`leafgrid${index + 1}`}>
           <Link style={{color: data.cat.ACFCategoryData.color}} to={normalizePath(post.uri)}>
-          <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > {post.title} </div>
+          <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > <div className="item-title">{post.title}</div> </div>
           </Link>
         </div>
       ))}

@@ -14,7 +14,7 @@ export default function Heart({ data, pageContext }) {
 return (
   <Layout background={data.cat.ACFCategoryData.background.localFile.publicURL}
   backColor={data.cat.ACFCategoryData.color}
-  frontColor="#FFC700"
+  frontColor="#FFC700" logoToggle={true}
   >
     
 
@@ -35,7 +35,7 @@ return (
 
         <div key={post.id} className={`spaceshipgrid${index + 1}`}>
           <Link to={normalizePath(post.uri)}>
-         <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > {post.title} </div>
+         <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > <div className="item-title">{post.title}</div> </div>
           </Link>
         </div>
       ))}

@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import LuvLogo from "./logo"
 import Menu from "./menu"
 
-export default ({frontColor, menuToggle}) => (
+export default ({frontColor, menuToggle, logoToggle}) => (
   <header>
-    <Link to="/"> 
+    {logoToggle ? <Link to="/"> 
       <LuvLogo frontColor={frontColor} />
-    </Link>
+    </Link> : null }
 
    {menuToggle ?  <Menu /> : null}
   </header>

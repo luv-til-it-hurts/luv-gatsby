@@ -3,7 +3,7 @@ import Header from "./header"
 
 import "../assets/style.css"
 
-const Layout = ({ children, background, backColor, frontColor, menuToggle }) => {
+const Layout = ({ children, background, backColor, frontColor, menuToggle, logoToggle }) => {
 
 
   const isBrowser = typeof document !== `undefined`
@@ -17,8 +17,9 @@ const Layout = ({ children, background, backColor, frontColor, menuToggle }) => 
 }
 
   return (
-    <div >
-        <Header menuToggle={menuToggle} frontColor={frontColor} />
+    <div>
+        <div style={logoToggle ? {display: 'block'} : {display: 'none'}}> <Header logoToggle={logoToggle} menuToggle={menuToggle} frontColor={frontColor} />
+        </div>
         <div>{children}</div>
     </div>
   )

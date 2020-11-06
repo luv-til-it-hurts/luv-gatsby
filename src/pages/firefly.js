@@ -7,22 +7,23 @@ import ReactPaginate from "react-paginate"
 import Layout from "../components/layout"
 import { normalizePath } from "../utils/get-url-path"
 
-export default function Heart({ data, pageContext }) {
+export default function Firefly({ data, pageContext }) {
+
 
 
   
 return (
   <Layout background={data.cat.ACFCategoryData.background.localFile.publicURL}
   backColor={data.cat.ACFCategoryData.color}
-  frontColor="#D0F63C">
+  frontColor="#D0F63C" logoToggle={true}>
 
 <div className="fireflygrid">
       {data.posts.nodes.map((post, index) => (
 
 
-        <div key={post.id} className={`fireflygrid${index + 1}`}>
+        <div key={index} className={`fireflygrid${index + 1}`}>
           <Link to={normalizePath(post.uri)}>
-         <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > {post.title} </div>
+         <div className="firefly-item-title" style={{color: data.cat.ACFCategoryData.color}} > <div className="item-title">{post.title}</div> </div>
           </Link>
         </div>
       ))}

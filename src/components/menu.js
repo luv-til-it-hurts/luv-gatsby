@@ -92,9 +92,9 @@ export default () => {
 
               if (path === "https://luvhurts.co/") {
                 return (
-                  <li>
+                  <li key={i}>
                     <a
-                      key={i + menuItem.url}
+                      
                       href={path}
                       target="_blank"
                       rel="noreferrer"
@@ -105,8 +105,8 @@ export default () => {
                 )
               } else {
                 return (
-                  <li>
-                    <Link key={i + menuItem.url} to={normalizePath(path)}>
+                  <li key={i}>
+                    <Link to={normalizePath(path)}>
                       {menuItem.label}
                     </Link>
                   </li>

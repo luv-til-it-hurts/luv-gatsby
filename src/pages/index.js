@@ -14,13 +14,13 @@ export default function Home({ data, pageContext }) {
 
   
 return (
-  <Layout frontColor="#e30613" backColor="#ffffff" menuToggle={true}>
+  <Layout frontColor="#e30613" backColor="#ffffff" menuToggle={true} logoToggle={true}>
 
      <div className="homegrid">
       {data.cats.nodes.map((cat, index) => (
 
 
-        <div key={cat.id} className={`homegrid${cat.ACFCategoryData.homeOrder}`}>
+        <div key={index} className={`homegrid${cat.ACFCategoryData.homeOrder}`}>
           <Link to={normalizePath(cat.slug)}>
 
 
@@ -29,14 +29,7 @@ return (
 
 
           {!!cat?.ACFCategoryData?.homeicon?.localFile && (
-                    // <img
-                    // onMouseEnter={() => setIsShown(true)}
-                    // onMouseLeave={() => setIsShown(false)}
-                    // className="homegrid-icon"
-                    //  src={
-                    //     cat.ACFCategoryData.homeicon.localFile.publicURL
-                    //   }
-                    // />
+     
                     <HomeItemToggle image={cat.ACFCategoryData.homeicon.localFile.publicURL} text={cat.ACFCategoryData.homeHover} />
  
                   

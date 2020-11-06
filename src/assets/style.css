@@ -160,19 +160,26 @@ margin: 0 25px;
 
 .text {
   color: white;
-  text-decoration: none;
-  margin: 50px 40px;
   font-size: 28px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
 }
 
 
 /* TITLE in boxes */
 .grid-item-title {
   margin: 40px 8px auto;
-  text-align: center;
   transform: rotate(45deg);
-  font-size: 17px;
-  line-height: 17px;
+}
+
+.item-title {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* HEART */
@@ -327,13 +334,17 @@ grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-column-gap: 2px;
 grid-row-gap: 2px;
-transform: rotate(-45deg);
+transform: rotate(64deg);
 }
 
 .fireflygrid>div {
   width: 120px;
   height: 120px;
   background-color: #D0F63C;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
 }
 
 .fireflygrid1 { grid-area: 1 / 1 / 2 / 2; }
@@ -343,7 +354,16 @@ transform: rotate(-45deg);
 .fireflygrid5 { grid-area: 2 / 4 / 3 / 5; }
 .fireflygrid6 { grid-area: 3 / 4 / 4 / 5; }
 
-
+.firefly-item-title {
+    transform: rotate(-64deg);
+    font-size: 14px;
+    line-height: 14px;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 47px 0px 0px 24px;
+  }
 
 
 
@@ -375,6 +395,53 @@ transform: rotate(-45deg);
   .ankhgrid5 { grid-area: 3 / 2 / 4 / 3; }
   .ankhgrid6 { grid-area: 3 / 3 / 4 / 4; }
   
+
+
+
+/* POST  */
+
+
+.post {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.post-previous{
+  
+
+
+}
+.post-body {
+  width:850px;
+background-color: #FFFFFA;
+padding: 140px 80px;
+font-size: 18px;
+
+}
+
+.post-body h1 {
+  font-size: 34px;
+  margin-bottom: 0px;
+  }
+
+  .post-body h2 {
+    font-size: 18px;
+    margin: 10px 0 50px;
+    }
+  
+
+.post-body p {
+line-height: 30px;
+
+
+}
+
+.post-next {
+
+
+}
 
 /* Gatsby Starter Styles */
 .pagination {

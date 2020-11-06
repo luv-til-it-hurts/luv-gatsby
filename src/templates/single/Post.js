@@ -1,14 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-import BlogPost from "../../components/template-parts/blog-post"
+import Post from "../../components/template-parts/post"
 
-export default ({ data }) => <BlogPost data={data} />
+export default ({ data }) => <Post data={data} />
 
 export const query = graphql`
   query post($id: String!, $nextPage: String, $previousPage: String) {
     page: wpPost(id: { eq: $id }) {
       title
       content
+      author {
+      node {
+        name
+      }
+    }
       featuredImage {
         node {
           remoteFile {
@@ -16,6 +21,18 @@ export const query = graphql`
           }
         }
       }
+      categories {
+      nodes {
+        ACFCategoryData {
+          color
+          pageicon {
+            localFile {
+              publicURL
+            }
+          }
+        }
+      }
+    }
     }
 
     nextPage: wpPost(id: { eq: $nextPage }) {
