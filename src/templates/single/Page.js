@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Post from "../../components/template-parts/post"
+import Page from "../../components/template-parts/page"
 
-export default ({ data }) => <Post data={data} />
+export default ({ data }) => <Page data={data} />
 
 export const query = graphql`
   query page($id: String!, $nextPage: String, $previousPage: String) {

@@ -1,40 +1,27 @@
-import React, { useState } from 'react';
-import { graphql, Link } from "gatsby"
+import React from "react"
+
+import { Link } from "gatsby"
+
 import Img from "gatsby-image"
+import Layout from "../layout"
+import { normalizePath } from "../../utils/get-url-path"
 
 
+function Post({ data }) {
+  console.log("Post -> data", data)
+  const { nextPage, previousPage, page } = data
+  const { title, content, featuredImage } = page
 
-import Layout from "../components/layout"
-import HomeItemToggle from "../components/home-item-toggle"
-import ArtistLed from "../assets/images/artist-led.png"
-import { normalizePath } from "../utils/get-url-path"
+  return (
+    <Layout logoToggle={true} frontColor="red">
+      <article
+        className="page"
+      >
+        <div className="page-previous">
 
-export default function Home({ data, pageContext }) {
 
-
-  
-return (
-  <Layout frontColor="#e30613" backColor="#ffffff" menuToggle={true} logoToggle={true}>
-
-     <div className="homegrid">
-      {data.cats.nodes.map((cat, index) => (
-
-        <div key={index} className={`homegrid${cat.ACFCategoryData.homeOrder}`}>
-          <Link to={normalizePath(cat.slug)}>
-
-          {!!cat?.ACFCategoryData?.homeicon?.localFile && (
-     
-                    <HomeItemToggle image={cat.ACFCategoryData.homeicon.localFile.publicURL} text={cat.ACFCategoryData.homeHover} />
- 
-                  )}
-                      
-          </Link>
-        </div>
-      ))}
-    </div>
-   <footer>
-   <div >
-          <a href="https://www.facebook.com/luvtilithurts/" style={{marginRight: '10px'}}>
+          <div className="page-social-icons">
+          <a href="https://www.facebook.com/luvtilithurts/">
               <svg width={32} height={32} fill="none">
                 <path
                   d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2.667 30.4v-9.733H22c.267 0 .533-.2.667-.467L24 15.533c.067-.2 0-.4-.133-.6-.134-.2-.334-.266-.534-.266h-4.666v-4h4c.4 0 .666-.267.666-.667V5.333c0-.4-.266-.666-.666-.666h-8C13.6 4.667 12 5.4 12 7.333v7.334H8.667c-.4 0-.667.266-.667.666V20c0 .4.267.667.667.667H12V28c0 .4.267.667.667.667s.666-.267.666-.667v-8c0-.4-.266-.667-.666-.667H9.333V16h3.334c.4 0 .666-.267.666-.667v-8c0-1.2 1-1.333 1.334-1.333H22v3.333h-4c-.4 0-.667.267-.667.667v5.333c0 .4.267.667.667.667h4.467l-.934 3.333H18c-.4 0-.667.267-.667.667v10.6c-.466.067-.866.067-1.333.067-8.067 0-14.667-6.6-14.667-14.667S7.933 1.333 16 1.333 30.667 7.933 30.667 16c0 7.2-5.2 13.133-12 14.4z"
@@ -61,41 +48,26 @@ return (
             </a>
           </div>
 
-<Link to="/about">
-<img src={ArtistLed} />
-</Link>
 
+        </div>
+        <div className="page-body">
+          <h1>{title}</h1>
 
+          {!!featuredImage?.node?.remoteFile?.childImageSharp && (
+            <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
+          )}
+          <p dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
 
+        <div className="page-next">
 
-   </footer>
-  </Layout>
-)}
+        </div>
 
-export const query = graphql`
-fragment Thumbnail on File {
-  childImageSharp {
-    fluid(maxWidth: 500) {
-      ...GatsbyImageSharpFluid_tracedSVG
-    }
-  }
+      </article>
+
+    </Layout>
+
+  )
 }
-query {
-  cats: allWpCategory {
-    nodes {
-      id
-      name
-      slug
-      ACFCategoryData {
-        homeOrder
-        homeHover
-        homeicon {
-          localFile {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-}
-`
+
+export default Post
