@@ -103,6 +103,14 @@ export default () => {
                     </a>
                   </li>
                 )
+              } else if (menuItem.label === "Luv ‘til it Hurts is a Work Group. Its outputs are collectively authored.") {
+                return (
+                  <li key={i}>
+                    <Link to={normalizePath(path)}>
+                      About
+                    </Link>
+                  </li>
+                )
               } else {
                 return (
                   <li key={i}>

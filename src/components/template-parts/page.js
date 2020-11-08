@@ -13,7 +13,7 @@ function Post({ data }) {
   const { title, content, featuredImage } = page
 
   return (
-    <Layout logoToggle={true} frontColor="red">
+    <Layout logoToggle={true} menuToggle={true} frontColor="red">
       <article
         className="page"
       >
