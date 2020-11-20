@@ -1,11 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import ReactPaginate from "react-paginate"
 
 
 import Layout from "../components/layout"
 import { normalizePath } from "../utils/get-url-path"
+import CatDesc from "../components/category-description-toggle"
 
 export default function Heart({ data, pageContext }) {
 
@@ -43,6 +42,7 @@ return (
 
 
 
+    <CatDesc slug={data.cat.slug} color={data.cat.ACFCategoryData.colorHigh} backgroundColor={data.cat.ACFCategoryData.color}  image={data.cat.ACFCategoryData.pageicon.localFile.publicURL} description={data.cat.description}/>
 
 
   </Layout>
@@ -59,8 +59,11 @@ fragment Thumbnail on File {
 query {
   cat: wpCategory(slug: {eq: "spaceship"}) {
     id
+    slug
+    description
     ACFCategoryData {
-      color
+      color 
+      colorHigh
       pageicon {
         localFile {
           publicURL

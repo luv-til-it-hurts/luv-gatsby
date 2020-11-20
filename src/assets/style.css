@@ -50,12 +50,12 @@ header {
 }
 
 .menu {
-  color: #e30613;
+  color: #ED1C24;
   margin: auto 0;
 }
 
 .menu a {
-  color: #e30613;
+  color: #ED1C24;
   text-decoration: none;
 
 }
@@ -126,7 +126,7 @@ footer {
 .homegrid>div {
   width: 120px;
   height: 120px;
-  background-color: #e30613;
+  background-color: #ED1C24;
   text-decoration: none;
 }
 
@@ -165,7 +165,8 @@ footer {
 
 .text {
   color: white;
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: 800;
   text-align: center;
   vertical-align: middle;
   line-height: 120px;
@@ -187,6 +188,15 @@ footer {
   width: 100%;
 }
 
+
+
+.grid-description-icon {
+  position: relative;
+  top: 145px;
+  right: 190px;
+}
+
+
 /* HEART */
 .heartgrid {
   width: 480px;
@@ -194,8 +204,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
   transform: rotate(-45deg);
 }
 
@@ -229,6 +239,21 @@ footer {
   grid-area: 3 / 2 / 4 / 3;
 }
 
+
+.heart-icon-container {
+  position: absolute;
+top: 280px;
+    right: 150px;
+}
+
+.heart-description-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 263px;
+  margin: 87px auto;
+  text-align: center;
+}
 
 /* HUMMINGBIRD */
 
@@ -274,6 +299,23 @@ footer {
   grid-area: 3 / 3 / 4 / 4;
 }
 
+.hummingbird-icon-container {
+  position: fixed;
+  top: 258px;
+  right: 1232px;
+}
+
+.hummingbird-description-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 228px;
+  margin: 42px auto 0;
+  padding: 50px 44px 44px;
+  text-align: center;
+  border-radius: 75%;
+}
+
 
 
 .leafgrid {
@@ -299,6 +341,23 @@ footer {
 .leafgrid4 { grid-area: 2 / 3 / 3 / 4; }
 .leafgrid5 { grid-area: 2 / 4 / 3 / 5; }
 .leafgrid6 { grid-area: 3 / 3 / 4 / 4; } 
+
+.leaf-icon-container {
+  position: absolute;
+top: 0px;
+    right: 110px;
+}
+
+.leaf-description-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 241px;
+  margin: 88px auto 0;
+  padding: 50px 44px 44px;
+  text-align: center;
+  border-radius: 75%;
+}
 
 
 /* SPACESHIP */
@@ -326,7 +385,22 @@ footer {
   .spaceshipgrid5 { grid-area: 3 / 2 / 4 / 3; }
   .spaceshipgrid6 { grid-area: 3 / 3 / 4 / 4; }
   
-
+  .spaceship-icon-container {
+    position: absolute;
+  top: 280px;
+      right: 150px;
+  }
+  
+  .spaceship-description-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    width: 252px;
+    margin: 63px auto 0;
+    padding: 50px 44px 44px;
+    text-align: center;
+    border-radius: 75%;
+  }
 
 
   /* FIREFLY */
@@ -370,7 +444,22 @@ transform: rotate(64deg);
     padding: 47px 0px 0px 24px;
   }
 
-
+  .firefly-icon-container {
+    position: absolute;
+  top: 280px;
+      right: 150px;
+  }
+  
+  .firefly-description-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    width: 252px;
+    margin: 63px auto 0;
+    padding: 50px 44px 44px;
+    text-align: center;
+    border-radius: 75%;
+  }
 
 
 /* ANKH */
@@ -400,9 +489,27 @@ transform: rotate(64deg);
   .ankhgrid5 { grid-area: 3 / 2 / 4 / 3; }
   .ankhgrid6 { grid-area: 3 / 3 / 4 / 4; }
   
+
+.ankh-icon-container {
+  position: fixed;
+top: 280px;
+    right: 150px;
+}
+
+.ankh-description-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 287px;
+  margin: 42px auto 0;
+  padding: 50px 44px 44px;
+  text-align: center;
+  border-radius: 75%;
+}
+
+
 /* PAGE */
 .page {
-
   top: 0;
   width: 100%;
   display: flex;

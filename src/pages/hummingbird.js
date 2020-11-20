@@ -5,6 +5,7 @@ import ReactPaginate from "react-paginate"
 
 import Layout from "../components/layout"
 import { normalizePath } from "../utils/get-url-path"
+import CatDesc from "../components/category-description-toggle"
 
 export default function Hummingbird({ data, pageContext }) {
 
@@ -25,6 +26,7 @@ return (
         </div>
       ))}
     </div>
+    <CatDesc slug={data.cat.slug} color={data.cat.ACFCategoryData.colorHigh} backgroundColor={data.cat.ACFCategoryData.color} image={data.cat.ACFCategoryData.pageicon.localFile.publicURL} description={data.cat.description}/>
 
   </Layout>
 )}
@@ -40,8 +42,11 @@ fragment Thumbnail on File {
 query {
   cat: wpCategory(slug: {eq: "hummingbird"}) {
     id
+    slug
+    description
     ACFCategoryData {
-      color
+      color 
+      colorHigh
       pageicon {
         localFile {
           publicURL

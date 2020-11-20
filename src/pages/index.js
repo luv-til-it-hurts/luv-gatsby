@@ -14,7 +14,7 @@ export default function Home({ data, pageContext }) {
 
   
 return (
-  <Layout frontColor="#e30613" backColor="#ffffff" menuToggle={true} logoToggle={true}>
+  <Layout frontColor="#ED1C24" backColor="#ffffff" menuToggle={true} logoToggle={true}>
 
      <div className="homegrid">
       {data.cats.nodes.map((cat, index) => (
