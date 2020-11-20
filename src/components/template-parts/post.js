@@ -18,11 +18,13 @@ function Post({ data }) {
         style={{ backgroundColor: categories.nodes[0].ACFCategoryData.color }}
       >
         <div className="post-previous">
+         <Link to={`../${categories.nodes[0].slug}`} >
           <img
             src={
               categories.nodes[0].ACFCategoryData.pageicon.localFile.publicURL
             }
           />
+          </Link>
 
           <div className="social-icons">
           <a href="https://www.facebook.com/luvtilithurts/">
@@ -71,16 +73,16 @@ function Post({ data }) {
           )}
           <p dangerouslySetInnerHTML={{ __html: content }} />
         </div>
-        <div className="post-next">
+        <div className="post-next" style={tags.nodes.length === 0 ? {flexFlow: 'column-reverse'}:null}>
 
 
-            {tags.nodes.map((tag, index) => 
+           <div className="post-tag-container"> {tags.nodes.map((tag, index) => 
               
               (<Link key={index} to={normalizePath(tag.slug)}>
              <img src={tag.ACFTagData.tagimage.localFile.publicURL}  /> 
               </Link>)
            
-            )}
+            )}</div>
 
 
 

@@ -590,6 +590,10 @@ height: 600px;
   flex-direction: column;
 }
 
+.social-icons a {
+margin-bottom: .5em;
+}
+
 .post-body {
   width:850px;
 background-color: #FFFFFA;
@@ -620,7 +624,11 @@ line-height: 30px;
   justify-content: space-between;
   height: 600px;
 }
-
+.post-tag-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
 /* Gatsby Starter Styles */
 .pagination {
   width: 100%;

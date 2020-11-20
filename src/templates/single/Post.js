@@ -23,6 +23,7 @@ export const query = graphql`
       }
       categories {
       nodes {
+        slug
         ACFCategoryData {
           color
           colorHigh
