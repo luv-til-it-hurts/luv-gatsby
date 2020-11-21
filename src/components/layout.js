@@ -12,7 +12,6 @@ const Layout = ({ children, background, backColor, frontColor, menuToggle, logoT
   document.body.style.backgroundColor = backColor
   document.body.style.backgroundImage = `url(${background})`
   document.body.style.backgroundPosition = 'center'
-  document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
 }
 

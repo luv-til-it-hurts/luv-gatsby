@@ -10,7 +10,6 @@ function HomeItemToggle({ slug, image, description, color, backgroundColor }) {
       onMouseLeave={() => setIsShown(false)}
     >
       <img
-        className="grid-description-icon"
         style={isShown ? { display: "none" } : null}
         src={image}
         alt=""

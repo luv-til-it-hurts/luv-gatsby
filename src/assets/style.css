@@ -175,8 +175,12 @@ footer {
 
 /* TITLE in boxes */
 .grid-item-title {
-  margin: 40px 8px auto;
   transform: rotate(45deg);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-title {
@@ -186,14 +190,6 @@ footer {
   line-height: 14px;
   margin: 0 auto;
   width: 100%;
-}
-
-
-
-.grid-description-icon {
-  position: relative;
-  top: 145px;
-  right: 190px;
 }
 
 
@@ -209,10 +205,23 @@ footer {
   transform: rotate(-45deg);
 }
 
-.heartgrid>div {
+.heartgrid>a {
   width: 120px;
   height: 120px;
   background-color: #E91E63;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
+}
+
+.heart-item-title {
+  transform: rotate(45deg);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heartgrid1 {
@@ -242,8 +251,13 @@ footer {
 
 .heart-icon-container {
   position: absolute;
-top: 280px;
-    right: 150px;
+  top: 430px;
+  right: 0px;
+  width: 434px;
+  height: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heart-description-text {
@@ -268,10 +282,14 @@ top: 280px;
   transform: rotate(-45deg);
 }
 
-.hummingbirdgrid>div {
+.hummingbirdgrid>a {
   width: 120px;
   height: 120px;
   background-color: #f35a02;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
 }
 
 
@@ -300,9 +318,14 @@ top: 280px;
 }
 
 .hummingbird-icon-container {
-  position: fixed;
-  top: 258px;
-  right: 1232px;
+  position: absolute;
+  top: 200px;
+  left: 90px;
+  width: 434px;
+  height: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hummingbird-description-text {
@@ -318,6 +341,10 @@ top: 280px;
 
 
 
+
+
+/* LEAF */
+
 .leafgrid {
   width: 480px;
   margin: 0 auto;
@@ -329,10 +356,14 @@ top: 280px;
   transform: rotate(-45deg);
 }
 
-.leafgrid>div {
+.leafgrid>a {
   width: 120px;
   height: 120px;
   background-color: #353132;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
 }
 
 .leafgrid1 { grid-area: 1 / 1 / 2 / 2; }
@@ -344,8 +375,13 @@ top: 280px;
 
 .leaf-icon-container {
   position: absolute;
-top: 0px;
-    right: 110px;
+  top: 0px;
+  right: 160px;
+  width: 434px;
+  height: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .leaf-description-text {
@@ -363,7 +399,7 @@ top: 0px;
 /* SPACESHIP */
 .spaceshipgrid {
   width: 360px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -372,10 +408,14 @@ top: 0px;
   transform: rotate(-45deg);
   }
 
-  .spaceshipgrid>div {
+  .spaceshipgrid>a {
     width: 120px;
     height: 120px;
     background-color: #FFC700;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
   }
   
   .spaceshipgrid1 { grid-area: 1 / 1 / 2 / 2; }
@@ -387,8 +427,13 @@ top: 0px;
   
   .spaceship-icon-container {
     position: absolute;
-  top: 280px;
-      right: 150px;
+    top: 430px;
+    right: 0px;
+    width: 434px;
+    height: 321px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .spaceship-description-text {
@@ -416,11 +461,12 @@ grid-row-gap: 2px;
 transform: rotate(64deg);
 }
 
-.fireflygrid>div {
+.fireflygrid>a {
   width: 120px;
   height: 120px;
   background-color: #D0F63C;
   font-size: 12px;
+  text-decoration: none;
   text-align: center;
   vertical-align: middle;
   line-height: 120px;
@@ -435,19 +481,22 @@ transform: rotate(64deg);
 
 .firefly-item-title {
     transform: rotate(-64deg);
-    font-size: 14px;
-    line-height: 14px;
     width: 120px;
     height: 120px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 47px 0px 0px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .firefly-icon-container {
     position: absolute;
-  top: 280px;
-      right: 150px;
+    top: 240px;
+    right: 60px;
+    width: 434px;
+    height: 321px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .firefly-description-text {
@@ -475,10 +524,14 @@ transform: rotate(64deg);
   transform: rotate(-45deg);
   }
 
-  .ankhgrid>div {
+  .ankhgrid>a {
     width: 120px;
     height: 120px;
     background-color: #ECE3C9;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
   }
   
   
@@ -491,17 +544,22 @@ transform: rotate(64deg);
   
 
 .ankh-icon-container {
-  position: fixed;
-top: 280px;
-    right: 150px;
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  width: 434px;
+  height: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ankh-description-text {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  width: 287px;
-  margin: 42px auto 0;
+  width: 199px;
+  margin: 69px auto 0;
   padding: 50px 44px 44px;
   text-align: center;
   border-radius: 75%;
@@ -651,6 +709,8 @@ line-height: 30px;
     justify-content: center;
     position: relative;
 }
+
+
 
 /* Gatsby Starter Styles */
 .pagination {

@@ -19,11 +19,11 @@ return (
 <div className="hummingbirdgrid">
       {data.posts.nodes.map((post, index) => (
 
-        <div key={post.id} className={`hummingbirdgrid${index + 1}`}>
-          <Link to={normalizePath(post.uri)}>
+
+          <Link to={normalizePath(post.uri)} key={post.id} className={`hummingbirdgrid${index + 1}`}>
          <div className="grid-item-title" style={{color: data.cat.ACFCategoryData.color}} > <div className="item-title">{post.title}</div> </div>
           </Link>
-        </div>
+   
       ))}
     </div>
     <CatDesc slug={data.cat.slug} color={data.cat.ACFCategoryData.colorHigh} backgroundColor={data.cat.ACFCategoryData.color} image={data.cat.ACFCategoryData.pageicon.localFile.publicURL} description={data.cat.description}/>
