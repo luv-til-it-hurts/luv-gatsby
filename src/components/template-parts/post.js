@@ -6,10 +6,10 @@ import Img from "gatsby-image"
 import Layout from "../layout"
 import { normalizePath } from "../../utils/get-url-path"
 
-function Post({ data }) {
-  console.log("Post -> data", data)
+function Post({ data, location }) {
+
   const { nextPage, previousPage, page } = data
-  const { title, author, content, featuredImage, categories, tags } = page
+  const { link, title, author, content, featuredImage, categories, tags } = page
 
   return (
     <Layout logoToggle={false}>
@@ -18,16 +18,16 @@ function Post({ data }) {
         style={{ backgroundColor: categories.nodes[0].ACFCategoryData.color }}
       >
         <div className="post-previous">
-         <Link to={`../${categories.nodes[0].slug}`} >
-          <img
-            src={
-              categories.nodes[0].ACFCategoryData.pageicon.localFile.publicURL
-            }
-          />
+          <Link to={`../${categories.nodes[0].slug}`}>
+            <img
+              src={
+                categories.nodes[0].ACFCategoryData.pageicon.localFile.publicURL
+              }
+            />
           </Link>
 
           <div className="social-icons">
-          <a href="https://www.facebook.com/luvtilithurts/">
+            <a href={`http://www.facebook.com/share.php?u=${location.href}`}>
               <svg width={32} height={32} fill="none">
                 <path
                   d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2.667 30.4v-9.733H22c.267 0 .533-.2.667-.467L24 15.533c.067-.2 0-.4-.133-.6-.134-.2-.334-.266-.534-.266h-4.666v-4h4c.4 0 .666-.267.666-.667V5.333c0-.4-.266-.666-.666-.666h-8C13.6 4.667 12 5.4 12 7.333v7.334H8.667c-.4 0-.667.266-.667.666V20c0 .4.267.667.667.667H12V28c0 .4.267.667.667.667s.666-.267.666-.667v-8c0-.4-.266-.667-.666-.667H9.333V16h3.334c.4 0 .666-.267.666-.667v-8c0-1.2 1-1.333 1.334-1.333H22v3.333h-4c-.4 0-.667.267-.667.667v5.333c0 .4.267.667.667.667h4.467l-.934 3.333H18c-.4 0-.667.267-.667.667v10.6c-.466.067-.866.067-1.333.067-8.067 0-14.667-6.6-14.667-14.667S7.933 1.333 16 1.333 30.667 7.933 30.667 16c0 7.2-5.2 13.133-12 14.4z"
@@ -73,21 +73,20 @@ function Post({ data }) {
           )}
           <p dangerouslySetInnerHTML={{ __html: content }} />
         </div>
-        <div className="post-next" style={tags.nodes.length === 0 ? {flexFlow: 'column-reverse'}:null}>
-
-
-           <div className="post-tag-container"> {tags.nodes.map((tag, index) => 
-              
-              (<Link key={index} to={normalizePath(tag.slug)}>
-             <img src={tag.ACFTagData.tagimage.localFile.publicURL}  /> 
-              </Link>)
-           
-            )}</div>
-
-
-
-
-
+        <div
+          className="post-next"
+          // style={
+          //   tags.nodes.length > 0 ? { flexFlow: "column-reverse" } : null
+          // }
+        >
+          <div className="post-tag-container">
+            {" "}
+            {tags.nodes.map((tag, index) => (
+              <Link key={index} to={normalizePath(tag.slug)}>
+                <img src={tag.ACFTagData.tagimage.localFile.publicURL} />
+              </Link>
+            ))}
+          </div>
 
           {!!nextPage && (
             <Link to={normalizePath(nextPage.uri)}>

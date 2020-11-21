@@ -2,13 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Post from "../../components/template-parts/post"
 
-export default ({ data }) => <Post data={data} />
+export default ({ location, data }) => <Post location={location} data={data} />
 
 export const query = graphql`
   query post($id: String!, $nextPage: String, $previousPage: String) {
     page: wpPost(id: { eq: $id }) {
       title
       content
+      link
       author {
       node {
         name
