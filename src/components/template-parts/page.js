@@ -7,8 +7,8 @@ import Layout from "../layout"
 import { normalizePath } from "../../utils/get-url-path"
 
 
-function Post({ data }) {
-  console.log("Post -> data", data)
+function Page({ data }) {
+
   const { nextPage, previousPage, page } = data
   const { title, content, featuredImage } = page
 
@@ -70,4 +70,4 @@ function Post({ data }) {
   )
 }
 
-export default Post
+export default Page

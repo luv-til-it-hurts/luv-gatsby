@@ -6,7 +6,7 @@ import { normalizePath } from "../utils/get-url-path"
 import CatDesc from "../components/category-description-toggle"
 
 export default function Heart({ data, pageContext }) {
-  console.log("Heart -> data", data)
+
 
   return (
     <Layout

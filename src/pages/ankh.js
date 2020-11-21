@@ -7,7 +7,7 @@ import CatDesc from "../components/category-description-toggle"
 import { normalizePath } from "../utils/get-url-path"
 
 export default function Heart({ data, pageContext }) {
-  console.log("Heart -> data", data)
+
   return (
     <Layout
       background={data.cat.ACFCategoryData.background.localFile.publicURL}
