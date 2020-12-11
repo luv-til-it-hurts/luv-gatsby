@@ -68,9 +68,9 @@ function Post({ data, location }) {
         <div className="post-body">
           <h1>{title}</h1>
           <h2>by {author.node.name}</h2>
-          {!!featuredImage?.node?.remoteFile?.childImageSharp && (
+          {/* {!!featuredImage?.node?.remoteFile?.childImageSharp && (
             <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
-          )}
+          )} */}
           <p dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         <div
