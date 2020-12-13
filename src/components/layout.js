@@ -5,12 +5,11 @@ import "../assets/style.css"
 
 const Layout = ({ children, background, backColor, frontColor, menuToggle, logoToggle }) => {
 
-
   const isBrowser = typeof document !== `undefined`
 
               if (isBrowser) {
   document.body.style.backgroundColor = backColor
-  document.body.style.backgroundImage = `url(${background})`
+  document.body.style.backgroundImage = (background !== 'none' ? `url(${background})`: background)
   document.body.style.backgroundPosition = 'center'
   document.body.style.backgroundRepeat = 'no-repeat'
 }

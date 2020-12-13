@@ -10,9 +10,15 @@ function Post({ data, location }) {
 
   const { nextPage, previousPage, page } = data
   const { link, title, author, content, featuredImage, categories, tags } = page
+  console.log("🚀 ~ file: post.js ~ line 13 ~ Post ~ categories", categories)
 
   return (
-    <Layout logoToggle={false}>
+    <Layout 
+    background="none"
+    backColor={categories.nodes[0].ACFCategoryData.color}
+    frontColor="#D0F63C"
+    logoToggle={false}
+    >
       <article
         className="post"
         style={{ backgroundColor: categories.nodes[0].ACFCategoryData.color }}
@@ -75,9 +81,7 @@ function Post({ data, location }) {
         </div>
         <div
           className="post-next"
-          // style={
-          //   tags.nodes.length > 0 ? { flexFlow: "column-reverse" } : null
-          // }
+
         >
           <div className="post-tag-container">
             {" "}

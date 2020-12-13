@@ -7,7 +7,7 @@ import Menu from "./menu"
 export default ({frontColor, menuToggle, logoToggle}) => (
   <header>
     {logoToggle ? <Link to="/"> 
-      <LuvLogo frontColor={frontColor} />
+      <LuvLogo frontcolor={frontColor} />
     </Link> : null }
 
    {menuToggle ?  <Menu /> : null}
