@@ -53,10 +53,10 @@ function Page({ data }) {
         <div className="page-body">
           <h1>{title}</h1>
 
-          {/* {!!featuredImage?.node?.remoteFile?.childImageSharp && (
+          {!!featuredImage?.node?.remoteFile?.childImageSharp && (
             <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
-          )} */}
-          <p dangerouslySetInnerHTML={{ __html: content }} />
+          )}
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         <div className="page-next">
