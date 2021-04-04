@@ -738,3 +738,11 @@ line-height: 30px;
 .pagination .previous {
   justify-self: start;
 }
+
+@media only screen and (min-width: 600px) {
+  .menu-container {
+    width: 290vw;
+  }
+
+
+}
