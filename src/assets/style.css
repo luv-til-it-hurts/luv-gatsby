@@ -739,10 +739,3 @@ line-height: 30px;
   justify-self: start;
 }
 
-@media only screen and (min-width: 600px) {
-  .menu-container {
-    width: 290vw;
-  }
-
-
-}
